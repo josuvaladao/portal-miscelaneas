@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Miscelâneas</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body { font-family: system-ui, sans-serif; background: #f1f5f9; color: #172c48; }
+    header { height: 52px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #fff; border-bottom: 1px solid #dbe3ed; }
+    header strong { font-size: 15px; }
+    a { color: #1557a0; font-size: 14px; }
+    iframe { display: block; border: 0; width: 100%; height: calc(100% - 52px); }
+    .notice { margin: 60px auto; padding: 28px; max-width: 560px; background: white; border-radius: 12px; line-height: 1.6; }
+    .notice h1 { font-size: 22px; }
+    [hidden] { display: none !important; }
+  </style>
+  <script src="./config.js" defer></script>
+  <script src="./portal.js" defer></script>
+</head>
+<body>
+  <header>
+    <strong>Portal de Miscelâneas</strong>
+    <a id="open-app" target="_blank" rel="noopener noreferrer" hidden>Abrir em nova aba</a>
+  </header>
+  <main id="notice" class="notice" role="status">
+    <h1>Portal em configuração</h1>
+    <p id="status-text">O endereço do aplicativo ainda não foi configurado pelo responsável pelo portal.</p>
+  </main>
+  <iframe id="portal" title="Portal de Levantamento para Criação de Miscelâneas" allow="geolocation; camera" hidden></iframe>
+  <noscript><p class="notice">Ative o JavaScript para acessar o portal.</p></noscript>
+</body>
+</html>
