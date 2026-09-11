@@ -1,0 +1,6 @@
+*.json
+!docs/config.json
+__pycache__/
+.env
+.env.*
+apps-script-local/
